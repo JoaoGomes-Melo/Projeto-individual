@@ -6,61 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="script/index.js">
     <link rel="stylesheet" href="style/style.css">
-    <title>Scooby-Doo</title>
     <link rel="icon" href="img/logo.png">
+    <title>Scooby-Doo</title>
 </head>
 
 <body>
-    
-        <header>
-            <nav>
-                <a class="logo" href="./index.html">Scooby-Doo</a>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</li></a>
-                    <li><a href="">Personagens</li></a>
-                    <li><a href="">Curiosidade</li></a>
-                    <li><a href="">Login</li></a>
-                    <li><a href="">Cadastro</li></a>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div id="container">
-                <div class="banner">
-                    <h2>Entre na van e descrubra os segredos por trás dos misterios mais assustadores de Scooby-Doo</h2>
-                    <button onclick="curiosidades()">Explorar curiosidades</button>
+    <header>
 
-                </div>
-                <div class="container-perso">
-                    <h2>Personagens Principais</h2>
-                    <div class="personagens">
-                        <!-- criar apenas uma div e mudar ela dentro do script -->
-                        <button onfocus="personagenSalsicha()">
-                            <div class="salsicha"><img src="img/salsicha.png" width="100px"></div>
-                        </button>
-                        #div_mensagem
-                        <button onfocus="personagenScooby()">
-                            <div class="salsicha"><img src="img/scooby.png" width="100px"></div>
-                        </button>
-                        <button onfocus="personagenVelma()">
-                            <div class="salsicha"><img src="img/velma.png" width="100px"></div>
-                        </button>
-                        <button onfocus="personagenDaphne()">
-                            <div class="salsicha"><img src="img/daphne.png" width="100px"></div>
-                        </button>
-                        <button onfocus="personagenFred()">
-                            <div class="salsicha"><img src="img/fred.png" width="100px"></div>
-                        </button>
-                        
-                        
-    
-                    </div>
-                </div>
-                <div>
-                    
-                </div>
+        <div class="nav-bar">
+            <div class="img-logo">
+                <img src="img/logo-texto.png" href="index.html">
             </div>
-        </main>
+            <div class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#personagens-section">Personagens</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </div>
+            <div class="botoes">
+                <button onclick="Btnlogin()" class="btn-login">Login</button>
+                <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button>
+            </div>
+            <div class="container-menu">
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Volte no tempo e decifre os mistérios da sua infância!</h1>
+                <p>
+                    A Máquina do Mistério está de volta — e desta vez, <b>você</b> faz parte da investigação!<br>
+                    Resolva palavras cruzadas inspiradas nos episódios clássicos de <b>Scooby-Doo</b>, descubra
+                    curiosidades,
+                    relembre vilões e prove que ainda é um verdadeiro caçador de mistérios.
+                </p>
+                <button onclick="btnJogar()" class="btn-jogar">🧩 Jogar Agora</button>
+            </div>
+        </section>
+        <section id="personagens-section" class="personagens">
+            <div class="personagens-texto">
+                <h1>Personagens</h1>
+            </div>
+            <div class="personagens-img">
+                
+            </div>
+            <button class="btn-proximo" onclick="proximo()"><img src="img/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+            <button class="btn-anterior" onclick="anterior()" ><img src="img/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+        </section>
+    </main>
+
 </body>
 
 </html>
