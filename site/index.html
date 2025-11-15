@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="script/index.js">
+    <script src="script/index.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="img/logo.png">
     <title>Scooby-Doo</title>
 </head>
 
 <body>
+    <!-- Cabeçalho -->
     <header>
 
         <div class="nav-bar">
@@ -20,13 +21,14 @@
             <div class="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#personagens-section">Personagens</a></li>
-                <li><a href="#curiosidades">Curiosidades</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#curiosidades-section">Curiosidades</a></li>
+                <li><a href="#sobre-section">Sobre</a></li>
             </div>
             <div class="botoes">
                 <button onclick="Btnlogin()" class="btn-login">Login</button>
                 <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button>
             </div>
+            <!-- Menu responsividade -->
             <div class="container-menu">
                 <div class="menu"></div>
                 <div class="menu"></div>
@@ -35,6 +37,7 @@
         </div>
     </header>
     <main>
+        <!-- Banner Inicial  -->
         <section class="banner">
             <div class="banner-text">
                 <h1>Volte no tempo e decifre os mistérios da sua infância!</h1>
@@ -47,15 +50,71 @@
                 <button onclick="btnJogar()" class="btn-jogar">🧩 Jogar Agora</button>
             </div>
         </section>
+        <!-- Personagens -->
         <section id="personagens-section" class="personagens">
-            <div class="personagens-texto">
-                <h1>Personagens</h1>
+            <!-- Botão anterior para voltar imagem -->
+            <div class="btn-anterior">
+                <button onclick="anterior()">
+                    <img src="img/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
             </div>
+            <!-- Pesonagem 1 Scooby -->
             <div class="personagens-img">
+                <div class="fundo-scooby">
+                    <img src="img/Design sem nome.png" class="scooby">
+                </div>
+
+            </div>
+            <div class="salsicha-texto">
+                <h1>Scooby-Doo</h1><br>
+                <p>
+                    Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                    metendo em
+                    confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                    covardia,
+                    ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                    coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                    Mystery
+                    Inc.
+
+                </p>
+
+            </div>
+            <!-- Personagem 2 Salsicha -->
+            <div class="personagens-img" style="display: none;">
+                <div class="fundo-salsicha">
+                    <img src="img/salsicha.png" class="salsicha">
+                </div>
+
+            </div>
+            <div class="salsicha-texto" style="display: none;">
+                <h1>Salsicha</h1><br>
+                <p>
+                    Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                    metendo em
+                    confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                    covardia,
+                    ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                    coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                    Mystery
+                    Inc.
+
+                </p>
                 
             </div>
-            <button class="btn-proximo" onclick="proximo()"><img src="img/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
-            <button class="btn-anterior" onclick="anterior()" ><img src="img/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+            
+            <div class="btn-proximo">
+                <button onclick="proximo()">
+                    <img src="img/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+            </div>
+            
+
+
+        </section>
+
+        <section id="curiosidades-section" class="curiosidades">
+            <div class="curiosidades-text">
+                <h1>Curiosidades</h1>
+            </div>
         </section>
     </main>
 
