@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/index.js"></script>
+    <link rel="stylesheet" href="style/styleLogin.css">
+    <link rel="icon" href="img/logo.png">
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+
+        <div class="nav-bar">
+            <div class="img-logo">
+                <img src="img/logo-texto.png" href="index.html">
+            </div>
+            <div class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#personagens-section">Personagens</a></li>
+                <li><a href="#curiosidades-section">Curiosidades</a></li>
+                <!-- <li><a href="#sobre-section">Sobre</a></li> -->
+            </div>
+            <div class="botoes">
+                <a href="login.html"><button onclick="Btnlogin()" class="btn-login">Login</button></a>
+                <a href="cadastro.html"> <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button></a>
+            </div>
+            <!-- Menu responsividade -->
+            <div class="container-menu">
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="banner">
+            <div class="container">
+                <div class="fundo">
+                    <div class="formulario">
+                        <div class="campo">
+                            <span>E-mail:</span>
+                            <input id="email_input" type="text" placeholder="email@gmail.com">
+                        </div>
+                        <div class="campo">
+                            <span>Senha:</span>
+                            <input id="senha_input" type="password" placeholder="******">
+                            
+                        </div>
+                        <button class="botao" onclick="login()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>

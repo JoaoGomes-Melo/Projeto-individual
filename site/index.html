@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <script src="script/index.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="img/logo.png">
-    <title>Scooby-Doo</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -22,11 +22,11 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#personagens-section">Personagens</a></li>
                 <li><a href="#curiosidades-section">Curiosidades</a></li>
-                <li><a href="#sobre-section">Sobre</a></li>
+                <!-- <li><a href="#sobre-section">Sobre</a></li> -->
             </div>
             <div class="botoes">
-                <button onclick="Btnlogin()" class="btn-login">Login</button>
-                <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button>
+              <a href="login.html"><button onclick="Btnlogin()" class="btn-login">Login</button></a> 
+              <a href="cadastro.html"> <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button></a> 
             </div>
             <!-- Menu responsividade -->
             <div class="container-menu">
@@ -50,6 +50,7 @@
                 <button onclick="btnJogar()" class="btn-jogar">🧩 Jogar Agora</button>
             </div>
         </section>
+
         <!-- Personagens -->
         <section id="personagens-section" class="personagens">
             <!-- Botão anterior para voltar imagem -->
@@ -58,55 +59,126 @@
                     <img src="img/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
             </div>
             <!-- Pesonagem 1 Scooby -->
-            <div class="personagens-img">
-                <div class="fundo-scooby">
-                    <img src="img/Design sem nome.png" class="scooby">
+            <div id="perso-scooby">
+                <div id="personagens" class="personagens-img">
+                    <div class="fundo-scooby">
+                        <img src="img/Design sem nome.png" class="scooby">
+                    </div>
+
                 </div>
+                <div class="salsicha-texto">
+                    <h1>Scooby-Doo</h1><br>
+                    <p>
+                        Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                        metendo em
+                        confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                        covardia,
+                        ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                        coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                        Mystery
+                        Inc.
 
-            </div>
-            <div class="salsicha-texto">
-                <h1>Scooby-Doo</h1><br>
-                <p>
-                    Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
-                    metendo em
-                    confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
-                    covardia,
-                    ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
-                    coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
-                    Mystery
-                    Inc.
-
-                </p>
-
+                    </p>
+                </div>
             </div>
             <!-- Personagem 2 Salsicha -->
-            <div class="personagens-img" style="display: none;">
-                <div class="fundo-salsicha">
-                    <img src="img/salsicha.png" class="salsicha">
+            <div id="perso-salsicha" style="display: none;">
+                <div class="personagens-img">
+                    <div class="fundo-salsicha">
+                        <img src="img/salsicha.png" class="salsicha">
+                    </div>
+
                 </div>
+                <div class="salsicha-texto">
+                    <h1>Salsicha</h1><br>
+                    <p>
+                        Salsicha Rogers é o personagem mais descontraído e espontâneo do grupo.<br> Conhecido por seu
+                        jeito
+                        desleixado, humor natural e um apetite que parece não ter fim, ele se destaca como o alívio
+                        cômico das aventuras.<br> Mesmo sendo o primeiro a correr de qualquer barulho suspeito, Salsicha
+                        demonstra uma lealdade inabalável aos amigos e sempre encontra coragem quando mais importa.
 
-            </div>
-            <div class="salsicha-texto" style="display: none;">
-                <h1>Salsicha</h1><br>
-                <p>
-                    Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
-                    metendo em
-                    confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
-                    covardia,
-                    ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
-                    coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
-                    Mystery
-                    Inc.
+                    </p>
 
-                </p>
-                
+                </div>
             </div>
-            
+            <!-- Personagem 3 FRED -->
+            <div id="perso-fred" style="display: none;">
+                <div class="personagens-img">
+                    <div class="fundo-fred">
+                        <img src="img/fred.png" class="fred">
+                    </div>
+
+                </div>
+                <div class="fred-texto">
+                    <h1>Fred</h1><br>
+                    <p>
+                        Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                        metendo em
+                        confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                        covardia,
+                        ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                        coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                        Mystery
+                        Inc.
+
+                    </p>
+
+                </div>
+            </div>
+            <!-- Personagem 4 Daphne -->
+            <div id="perso-daphne" style="display: none;">
+                <div class="personagens-img">
+                    <div class="fundo-daphne">
+                        <img src="img/daphne.png" class="daphne">
+                    </div>
+
+                </div>
+                <div class="daphne-texto">
+                    <h1>Daphne</h1><br>
+                    <p>
+                        Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                        metendo em
+                        confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                        covardia,
+                        ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                        coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                        Mystery
+                        Inc.
+
+                    </p>
+
+                </div>
+            </div>
+            <!-- Personagem 5 Velma -->
+            <div id="perso-velma" style="display: none;">
+                <div class="personagens-img">
+                    <div class="fundo-velma">
+                        <img src="img/velma.png" class="velma">
+                    </div>
+
+                </div>
+                <div class="velma-texto">
+                    <h1>Velma</h1><br>
+                    <p>
+                        Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+                        metendo em
+                        confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+                        covardia,
+                        ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+                        coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+                        Mystery
+                        Inc.
+
+                    </p>
+
+                </div>
+            </div>
             <div class="btn-proximo">
                 <button onclick="proximo()">
                     <img src="img/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
             </div>
-            
+
 
 
         </section>
@@ -115,8 +187,72 @@
             <div class="curiosidades-text">
                 <h1>Curiosidades</h1>
             </div>
+            <div class="texto-curiosidades">
+                <div class="curiosidade1">
+                    <p><b>1.</b> A série nasceu em resposta a críticas sobre violência em desenhos animados
+
+                        No final dos anos 1960, muitos grupos de pais e educadores reclamavam que os desenhos estavam
+                        violentos demais. <br> Para criar algo mais leve, a equipe responsável apostou em um formato com
+                        mistério, humor e sustos moderados, substituindo lutas e cenas agressivas por investigações e
+                        revelações cômicas. <br> Isso acabou moldando um novo estilo de animação infantil focado em
+                        aventura
+                        e
+                        resolução de problemas. </p>
+                </div>
+                <div class="curiosidade2">
+                    <p><b>2.</b> O personagem canino ajudou a popularizar mascotes falantes em animações
+
+                        Embora não tenha sido o primeiro animal antropomorfizado em desenhos, o personagem ajudou a
+                        reforçar a ideia de mascotes carismáticos, <br>com personalidade forte e humor marcante, que
+                        fazem
+                        dupla com um humano. <br> Depois disso, várias outras produções passaram a incluir mascotes
+                        amigáveis
+                        para fortalecer a identificação emocional do público. </p>
+                </div>
+                <div class="curiosidade3">
+                    <p><b>3.</b> A franquia evoluiu acompanhando gerações e mudanças culturais
+
+                        Ao longo de décadas, a série foi se atualizando para refletir transformações na tecnologia, no
+                        comportamento dos jovens e no modo de contar histórias. br Isso fez com que a obra mantivesse
+                        relevância cultural, sendo reinterpretada em múltiplas versões, estilos de arte, mídias digitais
+                        e formatos diferentes — de animações tradicionais a projetos mais atuais. </p>
+                </div>
+            </div>
         </section>
+        <!-- <section id="sobre-section" class="sobre">
+            <div class="Divsobre">
+                <h1>Sobre o projeto</h1>
+            </div>
+            <div class="sobre-text">
+                <p></p>
+            </div>
+
+        </section> -->
     </main>
+
+    <footer>
+        <section class="footer-section">
+            <div class="footer">
+                <p class="footer-text">
+                    Feito com dedicação e criatividade. © 2025 — Todos os direitos reservados.
+                </p>
+
+                <div class="footer-social">
+                    <div>
+                        <a href="https://www.instagram.com/joaogomes_melo/"><img src="img/instagram.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-gomes-de-melo-184794387/"> <img
+                                src="img/linkedin.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/JoaoGomes-Melo"><img src="img/github.png"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </footer>
 
 </body>
 
