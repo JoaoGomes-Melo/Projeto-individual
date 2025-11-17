@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/index.js"></script>
+  <script src="./js/sessao.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/imgs/logo.png">
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+
+    <div class="nav-bar">
+      <div class="img-logo">
+        <img src="assets/imgs/logo-texto.png" href="index.html">
+      </div>
+      <div class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#personagens-section">Personagens</a></li>
+        <li><a href="#curiosidades-section">Curiosidades</a></li>
+        <!-- <li><a href="#sobre-section">Sobre</a></li> -->
+      </div>
+      <div class="botoes">
+        <a href="login.html"><button onclick="Btnlogin()" class="btn-login">Login</button></a>
+        <a href="cadastro.html"> <button onclick="Btncadastro()" class="btn-cadastro">Cadastro</button></a>
+      </div>
+      <!-- Menu responsividade -->
+      <div class="container-menu">
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Banner Inicial  -->
+    <section class="banner">
+      <div class="banner-text">
+        <h1>Volte no tempo e decifre os mistérios da sua infância!</h1>
+        <p>
+          A Máquina do Mistério está de volta — e desta vez, <b>você</b> faz parte da investigação!<br>
+          Resolva palavras cruzadas inspiradas nos episódios clássicos de <b>Scooby-Doo</b>, descubra
+          curiosidades,
+          relembre vilões e prove que ainda é um verdadeiro caçador de mistérios.
+        </p>
+        <button onclick="btnJogar()" class="btn-jogar">🧩 Jogar Agora</button>
+      </div>
+    </section>
+
+    <!-- Personagens -->
+    <section id="personagens-section" class="personagens">
+      <!-- Botão anterior para voltar imagem -->
+      <div class="btn-anterior">
+        <button onclick="anterior()">
+          <img src="assets/imgs/arrow_back_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+      </div>
+      <!-- Pesonagem 1 Scooby -->
+      <div id="perso-scooby">
+        <div id="personagens" class="personagens-img">
+          <div class="fundo-scooby">
+            <img src="assets/imgs/scooby.png" class="scooby">
+          </div>
+
+        </div>
+        <div class="salsicha-texto">
+          <h1>Scooby-Doo</h1><br>
+          <p>
+            Scooby-Doo é um dogue alemão medroso, divertido e muito leal.<br> No desenho, ele vive se
+            metendo em
+            confusões ao lado de Salsicha, sempre motivado por comida e medo de fantasmas. <br> Apesar da
+            covardia,
+            ele acaba ajudando a resolver mistérios graças ao seu faro apurado e aos momentos inesperados de
+            coragem. <br> Seu jeito atrapalhado, fala característica e humor fazem dele o coração da equipe
+            Mystery
+            Inc.
+
+          </p>
+        </div>
+      </div>
+      <!-- Personagem 2 Salsicha -->
+      <div id="perso-salsicha" style="display: none;">
+        <div class="personagens-img">
+          <div class="fundo-salsicha">
+            <img src="assets/imgs/salsicha.png" class="salsicha">
+          </div>
+
+        </div>
+        <div class="salsicha-texto">
+          <h1>Salsicha</h1><br>
+          <p>
+            Salsicha Rogers é o personagem mais descontraído e espontâneo do grupo.<br> Conhecido por seu
+            jeito
+            desleixado, humor natural e um apetite que parece não ter fim, ele se destaca como o alívio
+            cômico das aventuras.<br> Mesmo sendo o primeiro a correr de qualquer barulho suspeito, Salsicha
+            demonstra uma lealdade inabalável aos amigos e sempre encontra coragem quando mais importa.
+
+          </p>
+
+        </div>
+      </div>
+      <!-- Personagem 3 FRED -->
+      <div id="perso-fred" style="display: none;">
+        <div class="personagens-img">
+          <div class="fundo-fred">
+            <img src="assets/imgs/fred.png" class="fred">
+          </div>
+
+        </div>
+        <div class="fred-texto">
+          <h1>Fred</h1><br>
+          <p>
+            Fred é o líder natural da equipe, reconhecido por sua confiança, disciplina e senso de
+            responsabilidade. Ele costuma organizar os planos, orientar o grupo e pensar em soluções
+            estratégicas durante as investigações. Sempre motivado a encontrar respostas, Fred mantém a
+            equipe focada e unida, agindo com coragem e determinação mesmo nas situações mais inesperadas.
+            Sua presença transmite segurança e equilíbrio, tornando-o uma peça essencial em cada mistério.
+
+          </p>
+
+        </div>
+      </div>
+      <!-- Personagem 4 Daphne -->
+      <div id="perso-daphne" style="display: none;">
+        <div class="personagens-img">
+          <div class="fundo-daphne">
+            <img src="assets/imgs/daphne.png" class="daphne">
+          </div>
+
+        </div>
+        <div class="daphne-texto">
+          <h1>Daphne</h1><br>
+          <p>
+            Daphne é a integrante mais curiosa e destemida do grupo, conhecida por seu olhar atento e sua
+            capacidade de encontrar soluções criativas em momentos críticos. Sempre elegante e confiante,
+            ela enfrenta desafios com coragem e improviso, transformando situações difíceis em oportunidades
+            para avançar no mistério. Sua determinação, empatia e habilidade de perceber detalhes fazem dela
+            uma presença essencial, equilibrando o time com inteligência e intuição.
+
+          </p>
+
+        </div>
+      </div>
+      <!-- Personagem 5 Velma -->
+      <div id="perso-velma" style="display: none;">
+        <div class="personagens-img">
+          <div class="fundo-velma">
+            <img src="assets/imgs/velma.png" class="velma">
+          </div>
+
+        </div>
+        <div class="velma-texto">
+          <h1>Velma</h1><br>
+          <p>
+            Velma é a mente analítica do grupo, reconhecida por sua inteligência, lógica apurada e
+            habilidade em decifrar pistas complexas. Sempre observadora e focada, ela conecta informações
+            com rapidez e clareza, guiando a equipe em momentos decisivos. Sua postura prática, curiosidade
+            científica e pensamento racional fazem dela a peça-chave na resolução de cada mistério, trazendo
+            segurança e precisão para o grupo.
+
+          </p>
+
+        </div>
+      </div>
+      <div class="btn-proximo">
+        <button onclick="proximo()">
+          <img src="assets/imgs/arrow_forward_ios_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"></button>
+      </div>
+
+
+
+    </section>
+
+    <section id="curiosidades-section" class="curiosidades">
+      <div class="curiosidades-text">
+        <h1>Curiosidades</h1>
+      </div>
+      <div class="texto-curiosidades">
+        <div class="curiosidade1">
+          <p><b>1.</b> A série nasceu em resposta a críticas sobre violência em desenhos animados
+
+            No final dos anos 1960, muitos grupos de pais e educadores reclamavam que os desenhos estavam
+            violentos demais. <br> Para criar algo mais leve, a equipe responsável apostou em um formato com
+            mistério, humor e sustos moderados, substituindo lutas e cenas agressivas por investigações e
+            revelações cômicas. <br> Isso acabou moldando um novo estilo de animação infantil focado em
+            aventura
+            e
+            resolução de problemas. </p>
+        </div>
+        <div class="curiosidade2">
+          <p><b>2.</b> O personagem canino ajudou a popularizar mascotes falantes em animações
+
+            Embora não tenha sido o primeiro animal antropomorfizado em desenhos, o personagem ajudou a
+            reforçar a ideia de mascotes carismáticos, <br>com personalidade forte e humor marcante, que
+            fazem
+            dupla com um humano. <br> Depois disso, várias outras produções passaram a incluir mascotes
+            amigáveis
+            para fortalecer a identificação emocional do público. </p>
+        </div>
+        <div class="curiosidade3">
+          <p><b>3.</b> A franquia evoluiu acompanhando gerações e mudanças culturais
+
+            Ao longo de décadas, a série foi se atualizando para refletir transformações na tecnologia, no
+            comportamento dos jovens e no modo de contar histórias. br Isso fez com que a obra mantivesse
+            relevância cultural, sendo reinterpretada em múltiplas versões, estilos de arte, mídias digitais
+            e formatos diferentes — de animações tradicionais a projetos mais atuais. </p>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="sobre-section" class="sobre">
+            <div class="Divsobre">
+                <h1>Sobre o projeto</h1>
+            </div>
+            <div class="sobre-text">
+                <p></p>
+            </div>
+
+        </section> -->
+  </main>
+
+  <footer>
+    <section class="footer-section">
+      <div class="footer">
+        <p class="footer-text">
+          Feito com dedicação e criatividade. © 2025 — Todos os direitos reservados.
+        </p>
+
+        <div class="footer-social">
+          <div>
+            <a href="https://www.instagram.com/joaogomes_melo/"><img src="assets/imgs/instagram.png"></a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-gomes-de-melo-184794387/"> <img
+                src="assets/imgs/linkedin.png"></a>
+          </div>
+          <div>
+            <a href="https://github.com/JoaoGomes-Melo"><img src="assets/imgs/github.png"></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </footer>
+
+</body>
+
+</html>

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(../img/fundo3.png);
+    background-image: url(../assets/imgs/fundo3.png);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -293,4 +293,12 @@ body {
     transform: translateY(-3px);
     color: rgb(71, 245, 71);
     transform: color 0.2 ease;
+}
+.card_erro{
+    margin-top: -10px;
+    margin-bottom: 10px;
+    height: 5px;
+}
+.card_erro span{
+    font-size: 20px;
 }

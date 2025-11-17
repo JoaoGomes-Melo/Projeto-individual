@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url(../img/fundo3.png);
+    background-image: url(../assets/imgs/fundo3.png);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -208,7 +208,7 @@ body {
 
 .fundo {
     background: rgba(0, 0, 0, 0.5);
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
     max-width: 700px;
     backdrop-filter: blur(4px);
@@ -221,7 +221,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    width: 550px;
+    width: 400px;
 }
 
 .linha {
@@ -244,30 +244,9 @@ body {
     margin-bottom: 6px;
 }
 
-.campo p {
-    font-size: 15px;
-}
 
-.campo a {
-    color: #fff;
-}
-
-.campo a:hover {
-    color: rgb(71, 245, 71);
-    transform: translateY(-3px);
-    transform: color 0.2 ease;
-}
-
-.campo input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    box-sizing: border-box;
-}
-
-.campo select {
-    width: 100%;
+.campo input{
+      width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: none;
