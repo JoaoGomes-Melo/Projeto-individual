@@ -333,7 +333,10 @@ body {
   line-height: 1.8;
   margin-bottom: 30px;
   font-family: "Slackey", sans-serif;
+}
 
+.fundo-scooby:hover {
+  filter: drop-shadow(0px 0px 40px #fff);
 }
 
 /* Personagem salsicha */
@@ -350,6 +353,10 @@ body {
   align-items: center;
   overflow: hidden;
   z-index: -1;
+}
+
+.fundo-salsicha:hover {
+  filter: drop-shadow(0px 0px 40px #fff);
 }
 
 .personagens-img .salsicha {
@@ -406,6 +413,10 @@ body {
   z-index: -1;
 }
 
+.fundo-fred:hover {
+  filter: drop-shadow(0px 0px 40px #fff);
+}
+
 .personagens-img .fred {
   display: flex;
   object-fit: cover;
@@ -460,6 +471,10 @@ body {
   z-index: -1;
 }
 
+.fundo-daphne:hover {
+  filter: drop-shadow(0px 0px 40px #fff);
+}
+
 .personagens-img .daphne {
   display: flex;
   object-fit: cover;
@@ -512,6 +527,10 @@ body {
   align-items: center;
   overflow: hidden;
   z-index: -1;
+}
+
+.fundo-velma:hover {
+  filter: drop-shadow(0px 0px 40px #fff);
 }
 
 .personagens-img .velma {
