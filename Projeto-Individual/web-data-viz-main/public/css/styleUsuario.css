@@ -190,6 +190,10 @@ body {
     flex-direction: row;
 }
 
+.cards1:hover {
+    transform: translateY(-3px);
+}
+
 .cards1 img {
     width: 200px;
     height: 200px;
@@ -209,6 +213,10 @@ body {
 
 }
 
+.cards2:hover {
+    transform: translateY(-3px);
+}
+
 .cards2 img {
     width: 200px;
     height: 200px;
@@ -225,6 +233,10 @@ body {
     margin-left: 3%;
     flex-direction: row;
 
+}
+
+.cards3:hover {
+    transform: translateY(-3px);
 }
 
 .cards3 img {
@@ -246,6 +258,10 @@ body {
 
 }
 
+.cards7:hover {
+    transform: translateY(-3px);
+}
+
 .cards7 img {
     width: 200px;
     height: 200px;
@@ -264,6 +280,10 @@ body {
 
 }
 
+.cards8:hover {
+    transform: translateY(-3px);
+}
+
 .cards8 img {
     width: 200px;
     height: 200px;
@@ -280,6 +300,10 @@ body {
     margin-left: 3%;
     flex-direction: row;
 
+}
+
+.cards9:hover {
+    transform: translateY(-3px);
 }
 
 .cards9 img {
