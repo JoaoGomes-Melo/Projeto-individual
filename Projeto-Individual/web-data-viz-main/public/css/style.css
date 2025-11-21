@@ -138,7 +138,7 @@ body {
   gap: 2px;
 }
 
-@media (max-width: 1093px) {
+/* @media (max-width: 1093px) {
   .nav-bar .links {
     display: none;
   }
@@ -172,7 +172,7 @@ body {
     display: block;
     text-align: left;
   }
-}
+} */
 
 /* Fim NavBar */
 
