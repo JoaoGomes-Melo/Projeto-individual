@@ -168,10 +168,12 @@ main {
 
 .nulo1 {
     display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
-
 
 
 .linha-resposta {
@@ -201,4 +203,20 @@ main {
     transform: translateY(-3px);
     color: rgb(71, 245, 71);
     transform: color 0.2 ease;
+}
+
+.letra {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: transparent;
+}
+
+.letra.revelada {
+    opacity: 1;
 }

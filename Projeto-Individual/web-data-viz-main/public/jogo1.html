@@ -4,69 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/index.js"></script>
+    <script src="js/jogo1.js"></script>
     <link rel="stylesheet" href="css/jogo1.css">
     <link rel="icon" href="assets/imgs/logo.png">
     <title>what's new scooby doo</title>
 </head>
 
 <body>
-    <!-- Cabeçalho -->
-    <header>
 
+    <header>
         <div class="nav-bar">
             <div class="img-logo">
-                <img src="assets/imgs/logo-texto.png" href="index.html">
-            </div>
-            <div class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dashboard/dash.html">Dashborad</a></li>
+                <img src="assets/imgs/logo-texto.png">
             </div>
 
+            <div class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard/dash.html">Dashboard</a></li>
+            </div>
         </div>
     </header>
+
     <main class="main-jogo">
+
         <div class="perguntas">
+
             <div class="pergunta">
-                <span class="texto">1. Qual banda e responsavel pela criação da musica de abertura do desenho</span>
+                <span class="texto">1. Qual banda é responsável pela música de abertura?</span>
                 <div class="linha-resposta">
-                    <input type="text" id="input_pt1" class="ipt" placeholder="resposta"><!--simple plan-->
-                    <button class="btnValidar" onclick="res1()">validar</button>
+                    <input type="text" id="simple" class="ipt" placeholder="resposta">
+                    <button class="btnValidar" onclick="validar(simple, 1)">validar</button>
                 </div>
             </div>
+
             <div class="pergunta">
                 <span class="texto">2. Monstro que aparece no episódio de esportes na neve.</span>
                 <div class="linha-resposta">
-                    <input type="text" id="input_pt1" class="ipt" placeholder="resposta"> <!--Yeti-->
-                    <button class="btnValidar" onclick="res1()">validar</button>
+                    <input type="text" id="yeti" class="ipt" placeholder="resposta">
+                    <button class="btnValidar" onclick="validar(yeti, 2)">validar</button>
                 </div>
             </div>
-            <div class="pergunta">
-                <span class="texto">3. Cidade onde acontece o episódio do Samurai Fantasma. </span> <!--TOQUIO-->
-                <div class="linha-resposta">
-                    <input type="text" id="input_pt3" class="ipt" placeholder="resposta">
-                    <button class="btnValidar" onclick="res1()">validar</button>
-                </div>
-            </div>
-            <div class="pergunta">
-                <span class="texto">4. Comida preferida do Salsicha e do Scooby.</span> <!--SANDUICHE-->
-                <div class="linha-resposta">
-                    <input type="text" id="input_pt4" class="ipt" placeholder="resposta">
-                    <button class="btnValidar" onclick="res1()">validar</button>
-                </div>
-            </div>
-            <div class="pergunta">
-                <span class="texto">5. Cidade onde acontece o episódio do festival de música com a banda Simple
-                    Plan.</span>
-                <!--paris-->
-                <div class="linha-resposta">
-                    <input type="text" id="input_pt5" class="ipt" placeholder="resposta">
-                    <button class="btnValidar" onclick="res1()">validar</button>
-                </div>
-            </div>
-        </div>
 
+            <div class="pergunta">
+                <span class="texto">3. Cidade onde acontece o episódio do Samurai Fantasma.</span>
+                <div class="linha-resposta">
+                    <input type="text" id="toquio" class="ipt" placeholder="resposta">
+                    <button class="btnValidar" onclick="validar(toquio, 3)">validar</button>
+                </div>
+            </div>
+
+            <div class="pergunta">
+                <span class="texto">4. Comida preferida do Salsicha e Scooby.</span>
+                <div class="linha-resposta">
+                    <input type="text" id="sanduiche" class="ipt" placeholder="resposta">
+                    <button class="btnValidar" onclick="validar(sanduiche, 4)">validar</button>
+                </div>
+            </div>
+
+            <div class="pergunta">
+                <span class="texto">5. Cidade onde acontece o episódio do festival da banda Simple Plan.</span>
+                <div class="linha-resposta">
+                    <input type="text" id="paris" class="ipt" placeholder="resposta">
+                    <button class="btnValidar" onclick="validar(paris, 5)">validar</button>
+                </div>
+            </div>
+
+        </div>
         <table class="jogo">
+
             <tr>
                 <td>
                     <div class="vazio"></div>
@@ -86,83 +91,66 @@
                     </div>
                 </td>
             </tr>
-
             <tr>
                 <td>
                     <div class="numeracao">
                         <div class="numero">1.</div>
                     </div>
                 </td>
+
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">S</div>
+                        <div class="letra Simple">S</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">I</div>
+                        <div class="letra Simple">I</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">M</div>
+                        <div class="letra Simple">M</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">P</div>
+                        <div class="letra Simple Paris">P</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">L</div>
+                        <div class="letra Simple">L</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">E</div>
+                        <div class="letra Simple">E</div>
                     </div>
                 </td>
+
                 <td>
                     <div class="nulo1">-</div>
                 </td>
+
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">P</div>
+                        <div class="letra Simple">P</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">L</div>
+                        <div class="letra Simple">L</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">A</div>
+                        <div class="letra Simple">A</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSimple">N</div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="vazio"></div>
-                </td>
-                <td>
-                    <div class="vazio"></div>
-                </td>
-                <td>
-                    <div class="vazio"></div>
-                </td>
-                <td>
-                    <div class="vazio"></div>
-                </td>
-                <td>
-                    <div class="resposta">
-                        <div class="letraParis">A</div>
+                        <div class="letra Simple">N</div>
                     </div>
                 </td>
             </tr>
@@ -181,9 +169,30 @@
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraParis">R</div>
+                        <div class="letra Paris">A</div>
                     </div>
                 </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="vazio"></div>
+                </td>
+                <td>
+                    <div class="vazio"></div>
+                </td>
+                <td>
+                    <div class="vazio"></div>
+                </td>
+                <td>
+                    <div class="vazio"></div>
+                </td>
+                <td>
+                    <div class="resposta">
+                        <div class="letra Paris">R</div>
+                    </div>
+                </td>
+
                 <td>
                     <div class="vazio"></div>
                 </td>
@@ -211,6 +220,7 @@
                     </div>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <div class="vazio"></div>
@@ -226,9 +236,10 @@
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraParis">I</div>
+                        <div class="letra Paris">I</div>
                     </div>
                 </td>
+
                 <td>
                     <div class="vazio"></div>
                 </td>
@@ -252,10 +263,11 @@
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraParis">Y</div>
+                        <div class="letra yeti">Y</div>
                     </div>
                 </td>
             </tr>
+
             <tr>
                 <td>
                     <div class="vazio"></div>
@@ -266,6 +278,7 @@
                 <td>
                     <div class="vazio"></div>
                 </td>
+
                 <td>
                     <div class="numeracao">
                         <div class="numero">4.</div>
@@ -273,47 +286,47 @@
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraParis">S</div>
+                        <div class="letra Sanduiche Paris">S</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">A</div>
+                        <div class="letra Sanduiche">A</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">N</div>
+                        <div class="letra Sanduiche">N</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">D</div>
+                        <div class="letra Sanduiche">D</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">U</div>
+                        <div class="letra Sanduiche">U</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">I</div>
+                        <div class="letra Sanduiche">I</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">C</div>
+                        <div class="letra Sanduiche">C</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">H</div>
+                        <div class="letra Sanduiche">H</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">E</div>
+                        <div class="letra Sanduiche yeti">E</div>
                     </div>
                 </td>
             </tr>
@@ -351,39 +364,41 @@
                 <td>
                     <div class="vazio"></div>
                 </td>
+
                 <td>
                     <div class="numeracao">
                         <div class="numero">3.</div>
                     </div>
                 </td>
+
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">T</div>
+                        <div class="letra toquio yeti">T</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">O</div>
+                        <div class="letra toquio">O</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">Q</div>
+                        <div class="letra toquio">Q</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">U</div>
+                        <div class="letra toquio">U</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">I</div>
+                        <div class="letra toquio">I</div>
                     </div>
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">O</div>
+                        <div class="letra toquio">O</div>
                     </div>
                 </td>
             </tr>
@@ -426,14 +441,15 @@
                 </td>
                 <td>
                     <div class="resposta">
-                        <div class="letraSanduiche">I</div>
+                        <div class="letra yeti">I</div>
                     </div>
                 </td>
+
             </tr>
 
         </table>
-
-
-
     </main>
+
 </body>
+
+</html>
