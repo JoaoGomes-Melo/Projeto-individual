@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+
+/*Inicio NavBar*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../assets/imgs/fundo3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.img-logo {
+    display: flex;
+    height: 120px;
+    width: 100px;
+
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Slackey", sans-serif;
+
+}
+
+.nav-bar .img-logo {
+    display: flex;
+    padding-left: 15px;
+}
+
+.nav-bar .links {
+    display: flex;
+    gap: 100px;
+    margin-right: 30px;
+}
+
+.nav-bar .links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-bar .links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease
+}
+
+.nav-bar .links li:hover {
+    transform: translateY(-3px);
+}
+
+.nav-bar .links li a:hover {
+    color: rgb(71, 245, 71);
+    transform: color 0.2 ease;
+    transform: translateY(-3px);
+}
+
+/* Fim nav bar */
+
+/* Inicio perguntas */
+main {
+    display: flex;
+}
+
+.perguntas {
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 600px;
+    height: 700px;
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 2%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.perguntas .texto {
+    color: #ffa726;
+    text-shadow: 2px 2px 0 #4a0072;
+    font-family: "Slackey", sans-serif;
+    font-size: 20px;
+}
+
+.perguntas span {
+    margin-right: 10px;
+}
+
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 100%;
+}
+
+.perguntas .ipt {
+    align-self: center;
+    justify-self: center;
+    margin-top: 10px;
+
+}
+
+.perguntas .ipt {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 60%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* fim perguntas */
+
+/* Incio cruzadinha */
+.jogo {
+    background: rgba(163, 163, 163, 0.5);
+    display: block;
+    padding: 2rem;
+    width: 60%;
+    height: 700px;
+    border-radius: 0.5rem;
+    padding-top: 10px;
+    justify-self: center;
+    align-items: flex-start;
+    margin-left: 100px;
+    margin-top: 2%;
+}
+
+.numero {
+    font-size: 24px;
+    color: black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    transition: 0.8s;
+    opacity: .5;
+}
+
+.resposta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    border: 2px solid #4a0072;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px;
+    font-size: 0;
+}
+
+.nulo1 {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.linha-resposta {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+
+}
+
+.linha-resposta .btnValidar {
+    background: #6a1b9a;
+    color: #fff;
+    font-family: "Slackey", sans-serif;
+    padding: 10px 10px;
+    border: 2px solid #ffa726;
+    border-radius: 10px;
+    text-shadow: 2px 2px 0 #4a0072;
+    box-shadow: 0 4px 0 #4a0072;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.linha-resposta .btnValidar:hover {
+    background: #7b1fa2;
+    transform: translateY(-3px);
+    color: rgb(71, 245, 71);
+    transform: color 0.2 ease;
+}
