@@ -93,11 +93,11 @@
             finalizarAguardar();
             return false;
         } else {
-            setInterval(sumirMensagem,500);
+            setInterval(sumirMensagem, 500);
         }
 
 
-        console.log("FORM LOGIN: ", emailVar);  
+        console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
@@ -120,6 +120,7 @@
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
                         window.location = "usuario.html";
@@ -145,7 +146,7 @@
     }
 
     function sumirMensagem() {
-        erro.style.display = "none"
+        mensagem_erro.style.display = "none"
     }
 
 </script>

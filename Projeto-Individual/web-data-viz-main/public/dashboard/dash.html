@@ -1,11 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/dashboards.css">
+    <link rel="icon" href="../assets/imgs/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashborad</title>
 </head>
-<body>
-    
+
+<body onload="nomeUser()">
+    <header>
+
+        <div class="nav-bar">
+            <div class="img-logo">
+                <img src="../assets/imgs/logo-texto.png" href="index.html">
+            </div>
+            <div class="links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../jogo1.html">Jogo</a></li>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="graficos">
+            <div class="grafico">
+                <canvas id="graficoIdade"></canvas>
+            </div>
+
+            <div class="grafico2">
+                <canvas id="graficoSexo"></canvas>
+            </div>
+        </div>
+
+        <div class="kpis">
+            <div class="kpi1">
+                <span>Sua Pontuação</span>
+                <h1>200</h1>
+            </div>
+            <div class="kpi2">
+                <span>Respostas Erradas</span>
+                <h1>3</h1>
+            </div>
+            <div class="kpi3">
+                <span>Pontuação perdida</span>
+                <h1>50</h1>
+            </div>
+        </div>
+
+    </div>
+
 </body>
-</html>
+
+
+<script>
+    const idade = document.getElementById('graficoIdade');
+    const sexo = document.getElementById('graficoSexo');
+
+    new Chart(idade, {
+        type: 'bar',
+        data: {
+            labels: ["Pontuação Dos jogadores entre os mais novos e os mais velhos"],
+            datasets: [
+                {
+                    label: 'Mais Novos',
+                    data: [12],
+                    backgroundColor: '#4a0072'
+                },
+                {
+                    label: 'Mais Velhos',
+                    data: [19],
+                    backgroundColor: '#ffa726',
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: '#fff',
+                        font: {
+                            size: 16 //
+                        }
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#fff',
+                        align: 'center',
+                        textAlign: 'center',
+                        font: {
+                            size: 16 //
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff',
+                        font: {
+                            size: 18 // 
+                        }
+                    }
+                }
+            }
+        }
+    });
+    new Chart(sexo, {
+        type: 'pie',
+        data: {
+            labels: [
+                'Mulher',
+                'Homem'
+            ],
+            datasets: [{
+                label: 'Homem',
+                label: 'Mulher',
+                data: [100, 10],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }
+            ]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff',
+                        font: {
+                            size: 18 // 🔥 tamanho maior da legenda
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+</script>

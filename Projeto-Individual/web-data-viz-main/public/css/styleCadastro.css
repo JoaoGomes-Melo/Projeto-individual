@@ -210,12 +210,12 @@ body {
     padding: 20px;
     border-radius: 20px;
     height: 64%;
+    max-height: 70%;
     backdrop-filter: blur(4px);
     justify-content: center;
     align-items: center;
-    margin-top: -300px;
     margin-bottom: 20px;
-    position: absolute
+    position: relative
 
 }
 

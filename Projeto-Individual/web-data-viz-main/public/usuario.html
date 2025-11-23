@@ -10,7 +10,7 @@
     <title>User</title>
 </head>
 
-<body>
+<body onload="nomeUser()">
     <!-- Cabeçalho -->
     <header>
 
@@ -20,7 +20,7 @@
             </div>
             <div class="links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#personagens-section">Dashborad</a></li>
+                <li><a href="dashboard/dash.html">Dashborad</a></li>
             </div>
         </div>
     </header>
@@ -28,7 +28,7 @@
     <main>
         <section class="banner">
             <div class="temas-texto">
-                <h1>Escolha uma cruzadinha!</h1>
+                <h1 id="textUser"></h1>
             </div>
             <div class="cards">
                 <div class="cards1">
@@ -40,3 +40,11 @@
             </div>
             </div>
     </main>
+    <script>
+        function nomeUser(){
+            var usuario = sessionStorage.NOME_USUARIO
+
+            textUser.innerHTML = `Olá ${usuario}. Entre na sua cruzadinha!`
+            
+        }
+    </script>

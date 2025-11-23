@@ -175,21 +175,13 @@ body {
 
 }
 
-.cards-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space;
-    margin-left: -3%;
-    margin-top: 4%;
-}
-
 .cards1 {
     display: flex;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 20px;
-    max-width: 220px;
+    width: 500px;
+    height: 500px;
     backdrop-filter: blur(4px);
     justify-content: center;
     margin-left: 3%;
@@ -201,7 +193,7 @@ body {
 }
 
 .cards1 img {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
 
 }
