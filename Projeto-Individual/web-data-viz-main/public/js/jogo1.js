@@ -1,24 +1,34 @@
-// vetor de respostas
 var respostas = [
     "",
     "simple plan",
     "yeti",
     "toquio",
     "sanduiche",
-    "paris"
+    "paris",
+    "megalopolis",
+    "winkel",
+    "hoque",
+    "grecia",
+    "oricalco"
 ];
 
-// vetor com as classes das letras
+
 var classes = [
     "",
     "Simple",
     "yeti",
     "toquio",
     "Sanduiche",
-    "Paris"
+    "Paris",
+    "megalopolis",
+    "winkel",
+    "hoque",
+    "grecia",
+    "oricalco"
 ];
+
 var pontos = 0
-// função para mostrar as letras
+
 function mostrarLetras(nomeClasse) {
     var letras = document.getElementsByClassName(nomeClasse);
 
@@ -32,10 +42,11 @@ function validar(campo, numeroPergunta) {
     var respostaUsuario = campo.value.trim().toLowerCase();
     var respostaCerta = respostas[numeroPergunta];
 
-    if (respostaUsuario === respostaCerta) {
-        pontos += 10
+    if (respostaUsuario == respostaCerta) {
+        pontos += 20
         mostrarLetras(classes[numeroPergunta]);
     } else {
+        pontos -= 10
         alert("Resposta errada!");
     }
 }

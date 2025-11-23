@@ -19,6 +19,7 @@ body {
     height: 120px;
     width: 100px;
 
+
 }
 
 .nav-bar {
@@ -26,13 +27,14 @@ body {
     width: 100%;
     height: 60px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: "Slackey", sans-serif;
 
 }
 
 .nav-bar .img-logo {
     display: flex;
+    margin-left: -17%;
     padding-left: 15px;
 }
 
@@ -52,7 +54,8 @@ body {
 .nav-bar .links li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease
+    transition: color 0.3s ease;
+
 }
 
 .nav-bar .links li:hover {
@@ -77,9 +80,9 @@ main {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     width: 600px;
-    height: 700px;
+    max-height: 700px;
     backdrop-filter: blur(4px);
-    justify-content: center;
+    justify-content: flex-start;
     align-items: start;
     flex-direction: column;
     margin-left: 10px;
@@ -87,6 +90,9 @@ main {
     box-sizing: border-box;
     padding-left: 10px;
     text-align: center;
+    overflow-y: scroll;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .perguntas .texto {
@@ -134,7 +140,7 @@ main {
     background: rgba(163, 163, 163, 0.5);
     display: block;
     padding: 2rem;
-    width: 60%;
+    width: 50%;
     height: 700px;
     border-radius: 0.5rem;
     padding-top: 10px;
@@ -164,6 +170,7 @@ main {
     border-radius: 3px;
     box-shadow: 2px 2px 3px;
     font-size: 0;
+
 }
 
 .nulo1 {
@@ -187,7 +194,7 @@ main {
     background: #6a1b9a;
     color: #fff;
     font-family: "Slackey", sans-serif;
-    padding: 10px 10px;
+    padding: 6px 6px;
     border: 2px solid #ffa726;
     border-radius: 10px;
     text-shadow: 2px 2px 0 #4a0072;
@@ -219,4 +226,35 @@ main {
 
 .letra.revelada {
     opacity: 1;
+}
+
+/* Fim cruzadinha */
+
+/* Inicio botão finalizar*/
+.btnFinalizar{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+}
+.btnFinalizar button {
+    background: #6a1b9a;
+    color: #fff;
+    font-family: "Slackey", sans-serif;
+    padding: 10px 10px;
+    border: 2px solid #ffa726;
+    border-radius: 10px;
+    text-shadow: 2px 2px 0 #4a0072;
+    box-shadow: 0 4px 0 #4a0072;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btnFinalizar button:hover {
+    background: #7b1fa2;
+    transform: translateY(-3px);
+    color: rgb(71, 245, 71);
+    transform: color 0.2 ease;
 }
