@@ -28,15 +28,8 @@ var classes = [
 ];
 
 var pontos = 0
+var erros = 0
 
-function mostrarLetras(nomeClasse) {
-    var letras = document.getElementsByClassName(nomeClasse);
-
-    for (var i = 0; i < letras.length; i++) {
-        letras[i].style.opacity = "1";
-        letras[i].style.color = "black";
-    }
-}
 
 function validar(campo, numeroPergunta) {
     var respostaUsuario = campo.value.trim().toLowerCase();
@@ -46,7 +39,7 @@ function validar(campo, numeroPergunta) {
         pontos += 20
         mostrarLetras(classes[numeroPergunta]);
     } else {
-        pontos -= 10
+        erros = pontos -= 10
         alert("Resposta errada!");
     }
 }
