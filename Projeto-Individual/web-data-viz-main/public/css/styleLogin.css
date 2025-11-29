@@ -274,6 +274,21 @@
      transform: color 0.2 ease;
  }
 
+ .formulario p {
+    margin-top: 10px;
+     font-size: 15px;
+ }
+
+ .formulario a {
+     color: #fff;
+ }
+
+ .formulario a:hover {
+     color: rgb(71, 245, 71);
+     transform: translateY(-3px);
+     transform: color 0.2 ease;
+ }
+
  .card_erro {
      margin-top: -10px;
      margin-bottom: 10px;

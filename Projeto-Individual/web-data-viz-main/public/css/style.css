@@ -598,11 +598,12 @@ body {
   display: flex;
   font-family: "Slackey", sans-serif;
   color: #ffa726;
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   text-shadow: 3px 3px 0 #4a0072;
   justify-content: center;
   align-items: center;
+  gap: 10px
 }
 
 .curiosidade1 {

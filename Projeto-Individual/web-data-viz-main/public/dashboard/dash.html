@@ -10,7 +10,7 @@
     <title>Dashborad</title>
 </head>
 
-<body onload="nomeUser()">
+<body onload="carregarDash()">
     <header>
 
         <div class="nav-bar">
@@ -38,15 +38,15 @@
         <div class="kpis">
             <div class="kpi1">
                 <span>Sua Pontuação</span>
-                <h1>200</h1>
+                <h1 id="pontuacao"></h1>
             </div>
             <div class="kpi2">
-                <span>Respostas Erradas</span>
-                <h1>3</h1>
+                <span>Pontuação perdida</span>
+                <h1 id="h1totalErros"></h1>
             </div>
             <div class="kpi3">
-                <span>Pontuação perdida</span>
-                <h1>50</h1>
+                <span>Respostas erradas</span>
+                <h1 id="h1pontuacaoPerdida"></h1>
             </div>
         </div>
 
@@ -56,6 +56,45 @@
 
 
 <script>
+
+    function carregarDash() {
+        var id_usuario = sessionStorage.ID_USUARIO;
+
+        fetch(`/jogo/buscarDados/${id_usuario}`, {
+
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    pontuacaoTotal = json.pontuacao;
+                    totalErros = json.erros;
+                    pontuacaoPerdida = json.qtdErros;
+
+                    pontuacao.innerHTML = `${pontuacaoTotal}`;
+                    h1totalErros.innerHTML = `${totalErros}`;
+                    h1pontuacaoPerdida.innerHTML = `${pontuacaoPerdida}`;
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar a busca!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
     const idade = document.getElementById('graficoIdade');
     const sexo = document.getElementById('graficoSexo');
 
@@ -137,7 +176,7 @@
                     labels: {
                         color: '#fff',
                         font: {
-                            size: 18 // 🔥 tamanho maior da legenda
+                            size: 18 
                         }
                     }
                 }
