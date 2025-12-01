@@ -1,5 +1,6 @@
 USE ScoobyDoo;
 
+
 CREATE TABLE usuario (
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(45) NOT NULL,
@@ -37,10 +38,15 @@ insert into placar(idPlacar,fkjogo,fkusuario,pontuacao) values
 
 select * from placar;
 
-SELECT TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) AS idade FROM usuario WHERE TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) < 25;
-SELECT TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) AS idade FROM usuario WHERE TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) > 25;
+
 SELECT 
-    SUM(CASE WHEN TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) > 25 THEN pontuacao END) AS soma_acima_25,
-    SUM(CASE WHEN TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) < 25 THEN pontuacao END) AS soma_abaixo_25
+    SUM(CASE WHEN TIMESTAMPDIFF(YEAR, DtNasc, CURDATE()) < 25 THEN pontuacao END) as total
 FROM placar
 JOIN usuario ON fkUsuario = idUsuario;
+
+SELECT 
+    ROUND( (SUM(CASE WHEN sexo = 'M' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2 ) AS homem FROM usuario;
+SELECT ROUND( (SUM(CASE WHEN sexo = 'F' THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2 ) AS mulher FROM usuario;
+
+
+

@@ -59,6 +59,8 @@
 
     function carregarDash() {
         var id_usuario = sessionStorage.ID_USUARIO;
+        graficoTotal();
+        graficoSexo();
 
         fetch(`/jogo/buscarDados/${id_usuario}`, {
 
@@ -88,100 +90,131 @@
                     finalizarAguardar(texto);
                 });
             }
-
         }).catch(function (erro) {
             console.log(erro);
         })
 
         return false;
     }
-    const idade = document.getElementById('graficoIdade');
-    const sexo = document.getElementById('graficoSexo');
 
-    new Chart(idade, {
-        type: 'bar',
-        data: {
-            labels: ["Pontuação Dos jogadores entre os mais novos e os mais velhos"],
-            datasets: [
-                {
-                    label: 'Mais Novos',
-                    data: [12],
-                    backgroundColor: '#4a0072'
-                },
-                {
-                    label: 'Mais Velhos',
-                    data: [19],
-                    backgroundColor: '#ffa726',
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        color: '#fff',
-                        font: {
-                            size: 16 //
-                        }
+    var totalVelhos;
+    var totalNovos;
+    var porcHomem;
+    var porcMulher;
+    async function graficoTotal() {
+        const res = await fetch("/jogo/pontuacaoVelhos");
+        const res2 = await fetch("/jogo/pontuacaoNovos");
+
+        if (res.status === 200 && res2.status === 200) {
+            totalVelhos = await res.json();
+            totalNovos = await res2.json();
+            montaGrafico(totalNovos, totalVelhos);
+        }
+    }
+
+    async function graficoSexo() {
+        const res1 = await fetch("/jogo/porcentagemHomem");
+        const res2 = await fetch("/jogo/porcentagemMulher");
+        if (res1.status === 200 && res2.status === 200) {
+            porcHomem = await res1.json();
+            porcMulher = await res2.json();
+            montaGraficoSexo(porcHomem, porcMulher);
+        }
+    }
+
+
+    function montaGrafico(response, response2) {
+        const idade = document.getElementById('graficoIdade');
+        const sexo = document.getElementById('graficoSexo');
+
+        new Chart(idade, {
+            type: 'bar',
+            data: {
+                labels: ["Pontuação Dos jogadores entre os mais novos e os mais velhos"],
+                datasets: [
+                    {
+                        label: 'Mais Novos',
+                        data: [response[0].total],
+                        backgroundColor: '#4a0072'
+                    },
+                    {
+                        label: 'Mais Velhos',
+                        data: [response2[0].total],
+                        backgroundColor: '#ffa726',
                     }
-                },
-                x: {
-                    ticks: {
-                        color: '#fff',
-                        align: 'center',
-                        textAlign: 'center',
-                        font: {
-                            size: 16 //
-                        }
-                    }
-                }
+                ]
             },
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#fff',
-                        font: {
-                            size: 18 // 
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#fff',
+                            font: {
+                                size: 16 //
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#fff',
+                            align: 'center',
+                            textAlign: 'center',
+                            font: {
+                                size: 16 //
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff',
+                            font: {
+                                size: 18 // 
+                            }
                         }
                     }
                 }
             }
-        }
-    });
-    new Chart(sexo, {
-        type: 'pie',
-        data: {
-            labels: [
-                'Mulher',
-                'Homem'
-            ],
-            datasets: [{
-                label: 'Homem',
-                label: 'Mulher',
-                data: [100, 10],
-                backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)'
+        });
+    }
+    function montaGraficoSexo(response1, response2) {
+        const sexo = document.getElementById('graficoSexo');
+        new Chart(sexo, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Mulher',
+                    'Homem'
                 ],
-                hoverOffset: 4
-            }
-            ]
-        },
-        options: {
-            plugins: {
-                legend: {
-                    labels: {
-                        color: '#fff',
-                        font: {
-                            size: 18 
+                datasets: [{
+                    label: 'Homem',
+                    label: 'Mulher',
+                    data: [response2[0].mulher, response1[0].homem],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)'
+                    ],
+                    hoverOffset: 4
+                }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff',
+                            font: {
+                                size: 18
+                            }
                         }
                     }
                 }
             }
-        }
-    });
+        });
+    }
 
 </script>

@@ -72,7 +72,74 @@ function buscarDados(req, res) {
     }
 }
 
+
+function pontuacaoVelhos(req, res) {
+
+    jogoModel.pontuacaoVelhos()
+        .then((resultado) => {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).json([]);
+            }
+        })
+        .catch((erro) => {
+            console.log("Erro ao buscar dados:", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        });
+}
+function pontuacaoNovos(req, res) {
+
+    jogoModel.pontuacaoNovos()
+        .then((resultado) => {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).json([]);
+            }
+        })
+        .catch((erro) => {
+            console.log("Erro ao buscar dados:", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        });
+}
+function porcentagemHomem(req, res) {
+
+    jogoModel.porcentagemHomem()
+        .then((resultado) => {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).json([]);
+            }
+        })
+        .catch((erro) => {
+            console.log("Erro ao buscar dados:", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        });
+}
+function porcentagemMulher(req, res) {
+
+    jogoModel.porcentagemMulher()
+        .then((resultado) => {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).json([]);
+            }
+        })
+        .catch((erro) => {
+            console.log("Erro ao buscar dados:", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        });
+}
+
+
 module.exports = {
     inserirPlacar,
-    buscarDados
+    buscarDados,
+    pontuacaoVelhos,
+    pontuacaoNovos,
+    porcentagemHomem,
+    porcentagemMulher
 }
